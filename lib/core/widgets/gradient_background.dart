@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasally/core/themes/app_colors.dart';
 
 class GradientBackground extends StatelessWidget {
   const GradientBackground({super.key, required this.child});
@@ -12,8 +13,8 @@ class GradientBackground extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 27, 25, 25),
-            Color.fromARGB(255, 32, 33, 43),
+            AppColors.lightenBlack,
+            AppColors.darkenBlue,
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

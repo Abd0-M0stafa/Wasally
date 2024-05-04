@@ -18,6 +18,7 @@ class Wasally extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      textDirection: TextDirection.rtl,
       theme: AppTheme.appTheme,
       debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),

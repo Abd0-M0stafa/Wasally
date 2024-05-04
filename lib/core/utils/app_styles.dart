@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wasally/core/themes/app_colors.dart';
 
 abstract class AppStyels {
-  static final Shader textGradient = const LinearGradient(
-    colors: [AppColors.firstTextColor, AppColors.secondTextColor],
-  ).createShader(const Rect.fromLTWH(0.0, 0.0, 250.0, 60.0));
-
   static TextStyle regular15(context) {
     return TextStyle(
-      foreground: Paint()..shader = textGradient,
       fontFamily: 'MxRegular',
       fontSize: getResponsiveFontSize(context, 15),
     );
