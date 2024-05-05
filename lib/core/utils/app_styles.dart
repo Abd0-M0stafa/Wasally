@@ -4,6 +4,7 @@ abstract class AppStyels {
   static TextStyle regular15(context) {
     return TextStyle(
       fontFamily: 'MxRegular',
+      color: Colors.black,
       fontSize: getResponsiveFontSize(context, 15),
     );
   }
@@ -11,7 +12,8 @@ abstract class AppStyels {
   static TextStyle regular16(context) {
     return TextStyle(
       fontFamily: 'RaceSport',
-      fontSize: getResponsiveFontSize(context, 15),
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, 17),
     );
   }
 }
