@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:wasally/core/utils/images.dart';
-import 'package:wasally/features/on_boarding/presentation/view/on_boarding_view.dart';
+import 'package:wasally/features/home/presentation/view/home_view.dart';
 import 'package:wasally/features/splash/presentation/views/widgets/sligding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -63,7 +63,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Get.off(() => OnBoardingView(), transition: Transition.fade);
+        Get.off(() => HomeView(), transition: Transition.fade);
       },
     );
   }
