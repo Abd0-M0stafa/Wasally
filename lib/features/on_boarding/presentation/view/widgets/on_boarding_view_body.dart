@@ -5,6 +5,19 @@ class OnBoardingViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return const SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              'تخطي',
+              textAlign: TextAlign.start,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
