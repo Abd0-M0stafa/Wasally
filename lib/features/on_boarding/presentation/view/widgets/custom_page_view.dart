@@ -18,7 +18,7 @@ class CustomPageView extends StatelessWidget {
         subtitle:
             'Get all your loved foods in one once place,you just place the orer we do the rest'),
     OnBoardingItemModel(
-        image: Assets.imagesCategoriesOnboardingTest,
+        image: Assets.imagesCategoriesBakery,
         title: 'All your favorites',
         subtitle:
             'Get all your loved foods in one once place,you just place the orer we do the rest'),

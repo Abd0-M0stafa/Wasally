@@ -1,9 +1,6 @@
-import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
-import 'package:wasally/core/utils/app_styles.dart';
-import 'package:wasally/core/widgets/custom_elevated_button.dart';
 import 'package:wasally/features/on_boarding/presentation/view/widgets/custom_page_view.dart';
-import 'package:wasally/features/on_boarding/presentation/view/widgets/on_boarding_item.dart';
+import 'package:wasally/features/on_boarding/presentation/view/widgets/onboarding_buttons.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -18,7 +15,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   @override
   void initState() {
     pageController = PageController();
-    // TODO: implement initState
+
     super.initState();
   }
 
@@ -34,35 +31,12 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               controller: pageController,
             ),
             const Spacer(),
+            OnBoardingButtons(
+              pageController: pageController,
+            ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class OnBoardingButtons extends StatelessWidget {
-  const OnBoardingButtons({super.key, required this.pageController});
-  final PageController pageController;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomElevatedButton(
-          child: Text(
-            'التالي',
-            style: AppStyles.styleBold20(context),
-          ),
-        ),
-        CustomElevatedButton(
-          backgroundColor: Colors.transparent,
-          child: Text(
-            'تخطي',
-            style: AppStyles.styleBold20(context),
-          ),
-        )
-      ],
     );
   }
 }

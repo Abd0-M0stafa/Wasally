@@ -25,6 +25,15 @@ abstract class AppStyles {
       fontWeight: FontWeight.bold,
     );
   }
+
+  static TextStyle styleExtraBold24(context) {
+    return TextStyle(
+      fontFamily: 'RaceSport',
+      color: Colors.white,
+      fontSize: getResponsiveFontSize(context, 24),
+      fontWeight: FontWeight.w800,
+    );
+  }
 }
 
 double getResponsiveFontSize(context, double fontSize) {
