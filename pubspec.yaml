@@ -30,10 +30,10 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.6
   device_preview: ^1.1.0
+  expandable_page_view: ^1.0.17
   flutter:
     sdk: flutter
   get: ^4.6.6
-  expandable_page_view: ^1.0.17
 
 dev_dependencies:
   flutter_lints: ^3.0.0
