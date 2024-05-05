@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class AppStyels {
+abstract class AppStyles {
   static TextStyle regular15(context) {
     return TextStyle(
       fontFamily: 'MxRegular',
@@ -14,6 +14,15 @@ abstract class AppStyels {
       fontFamily: 'RaceSport',
       color: Colors.black,
       fontSize: getResponsiveFontSize(context, 17),
+    );
+  }
+
+  static TextStyle styleBold20(context) {
+    return TextStyle(
+      fontFamily: 'RaceSport',
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, 20),
+      fontWeight: FontWeight.bold,
     );
   }
 }
