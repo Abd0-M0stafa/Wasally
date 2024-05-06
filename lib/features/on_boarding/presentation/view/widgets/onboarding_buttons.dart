@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:wasally/core/themes/app_colors.dart';
 import 'package:wasally/core/utils/app_styles.dart';
 import 'package:wasally/core/widgets/custom_elevated_button.dart';
+import 'package:wasally/features/home/presentation/view/home_view.dart';
 
 class OnBoardingButtons extends StatelessWidget {
   const OnBoardingButtons({
@@ -16,12 +18,10 @@ class OnBoardingButtons extends StatelessWidget {
       children: [
         CustomElevatedButton(
           onPressed: () {
-            pageController.nextPage(
-                duration: const Duration(milliseconds: 500),
-                curve: Curves.ease);
+            navigateToNextPage(pageController.page!.round());
           },
           child: Text(
-            'التالي',
+            pageController.page == 2 ? 'بدأ' : 'التالي',
             style: AppStyles.styleBold20(context),
           ),
         ),
@@ -32,7 +32,10 @@ class OnBoardingButtons extends StatelessWidget {
                 )
               : CustomElevatedButton(
                   elevation: 0,
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.off(() => const HomeView(),
+                        transition: Transition.fade);
+                  },
                   backgroundColor: Colors.transparent,
                   child: Text(
                     'تخطي',
@@ -43,5 +46,14 @@ class OnBoardingButtons extends StatelessWidget {
         })
       ],
     );
+  }
+
+  void navigateToNextPage(int currentIndex) {
+    if (currentIndex == 2) {
+      Get.off(() => const HomeView(), transition: Transition.fade);
+    } else {
+      pageController.nextPage(
+          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    }
   }
 }

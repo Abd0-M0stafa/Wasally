@@ -17,9 +17,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   @override
   void initState() {
     pageController = PageController();
-
     pageController.addListener(() {
-      setState(() {});
+      setState(() {
+        currentPage = pageController.page!.round();
+      });
     });
 
     super.initState();
@@ -37,8 +38,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               controller: pageController,
             ),
             const Spacer(),
-            DotsListView(
-                currentIndex: pageController.page!.round(), dotsCount: 3),
+            DotsListView(currentPage: currentPage, dotsCount: 3),
             const SizedBox(
               height: 10,
             ),

@@ -4,8 +4,9 @@ import '../../features/home/presentation/view/widgets/custom_dot_indicator.dart'
 
 class DotsListView extends StatelessWidget {
   const DotsListView(
-      {super.key, required this.currentIndex, required this.dotsCount});
-  final int currentIndex;
+      {super.key, required this.dotsCount, required this.currentPage});
+
+  final int currentPage;
 
   final int dotsCount;
 
@@ -18,7 +19,7 @@ class DotsListView extends StatelessWidget {
         (index) => Padding(
           padding: const EdgeInsets.only(right: 5),
           child: CustomDotIndicator(
-            isActive: currentIndex == index,
+            isActive: currentPage == index,
           ),
         ),
       ),
