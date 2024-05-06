@@ -7,11 +7,13 @@ class CustomElevatedButton extends StatelessWidget {
     this.child,
     this.backgroundColor,
     this.onPressed,
+    this.elevation,
   });
   final Widget? child;
 
   final Color? backgroundColor;
   final Function()? onPressed;
+  final double? elevation;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
+              elevation: elevation,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
               backgroundColor: backgroundColor ?? AppColors.primaryColor),

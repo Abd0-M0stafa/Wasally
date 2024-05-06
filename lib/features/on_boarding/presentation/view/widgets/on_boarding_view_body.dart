@@ -11,10 +11,15 @@ class OnBoardingViewBody extends StatefulWidget {
 
 class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   late PageController pageController;
+  int currentPage = 0;
 
   @override
   void initState() {
     pageController = PageController();
+
+    pageController.addListener(() {
+      setState(() {});
+    });
 
     super.initState();
   }

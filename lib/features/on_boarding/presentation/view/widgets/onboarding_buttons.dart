@@ -4,7 +4,10 @@ import 'package:wasally/core/utils/app_styles.dart';
 import 'package:wasally/core/widgets/custom_elevated_button.dart';
 
 class OnBoardingButtons extends StatelessWidget {
-  const OnBoardingButtons({super.key, required this.pageController});
+  const OnBoardingButtons({
+    super.key,
+    required this.pageController,
+  });
   final PageController pageController;
 
   @override
@@ -22,15 +25,22 @@ class OnBoardingButtons extends StatelessWidget {
             style: AppStyles.styleBold20(context),
           ),
         ),
-        CustomElevatedButton(
-          onPressed: () {},
-          backgroundColor: Colors.transparent,
-          child: Text(
-            'تخطي',
-            style: AppStyles.regular16(context)
-                .copyWith(color: AppColors.whiteColor),
-          ),
-        )
+        Builder(builder: (context) {
+          return pageController.page == 2
+              ? const SizedBox(
+                  height: 62,
+                )
+              : CustomElevatedButton(
+                  elevation: 0,
+                  onPressed: () {},
+                  backgroundColor: Colors.transparent,
+                  child: Text(
+                    'تخطي',
+                    style: AppStyles.regular16(context)
+                        .copyWith(color: AppColors.whiteColor),
+                  ),
+                );
+        })
       ],
     );
   }
