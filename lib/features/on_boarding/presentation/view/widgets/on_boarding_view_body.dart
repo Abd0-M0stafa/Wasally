@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wasally/core/widgets/dots_list_view.dart';
 import 'package:wasally/features/on_boarding/presentation/view/widgets/custom_page_view.dart';
 import 'package:wasally/features/on_boarding/presentation/view/widgets/onboarding_buttons.dart';
 
@@ -36,7 +37,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               controller: pageController,
             ),
             const Spacer(),
-            
+            DotsListView(
+                currentIndex: pageController.page!.round(), dotsCount: 3),
+            const SizedBox(
+              height: 10,
+            ),
             OnBoardingButtons(
               pageController: pageController,
             ),
