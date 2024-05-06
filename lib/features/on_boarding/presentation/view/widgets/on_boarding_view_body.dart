@@ -36,6 +36,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               controller: pageController,
             ),
             const Spacer(),
+            
             OnBoardingButtons(
               pageController: pageController,
             ),
